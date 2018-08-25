@@ -1,0 +1,397 @@
+/*Desktop version  */
+ /* ------------------------ */
+/*home page  */
+body{
+  margin: 0;
+}
+#SlideShow img{
+  vertical-align: middle;
+  height: 750px;
+  width: 100%;
+}
+#SlideShow {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+.SlideCount {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: black;
+}
+
+.fade{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    text-decoration: underline;
+    font-family: 'Prompt', sans-serif;
+}
+/* Navigation Bar */
+#NavBar{
+  text-align: center;
+  background-color: grey;
+  opacity: .6;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#NavBar a{
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Karla', sans-serif;
+}
+#NavBar a:hover {
+  color: white;
+}
+#NavBar a:active{
+  color: white;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+}
+/* About BBhomes */
+#logo{
+  text-align: center;
+}
+.aboutBB{
+  margin-top: 17px;
+  text-align: center;
+  font-size: 19px;
+  letter-spacing: 3px;
+}
+/* projects page */
+#Pro{
+  text-align: center;
+  letter-spacing: 3px;
+  margin-top: 60px;
+  font-size: 25px;
+  margin-bottom: 35px;
+}
+#homes img{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 90px;
+  position: relative;
+}
+.image{
+  /* display: block; */
+  width: 400px;
+  height: 400px;
+  padding: 5px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+   text-align: center;
+}
+.house:hover .image {
+  opacity: 0.3;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 5px 5px grey;
+}
+
+.house:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+/* meet the owner page */
+.profile{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+.OwnerPic{
+  margin-left: 620px;
+  margin-bottom: 20px;
+}
+.name{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  font-family: 'Petit Formal Script', cursive;
+}
+
+.info{
+  font-size: 19px;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  width: 70%;
+  margin-left: 200px;
+  text-indent: 40px;
+  font-family: 'Questrial', sans-serif;
+  padding-bottom: 20px;
+}
+#owner{
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+/* CONTACT page */
+.ConPic{
+  width: 100%;
+  height: 440px;
+  filter: opacity(70%);
+}
+#contact{
+  /* background-color: white; */
+  height: 920px;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: #bbb5af;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: #bbb5af;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::placeholder, textarea::focus:placeholder {
+  color: #bbb5af;
+}
+
+input::-ms-placeholder, textarea::-ms-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+  color: #bbb5af;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+  color: #cbc6c1;
+}
+
+header {
+  /* position: relative; */
+  margin: 100px 0 25px 0;
+  font-size: 2.3em;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+#form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+  box-shadow: 5px 5px grey;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+
+  background: transparent;
+  outline: none;
+  color: #726659;
+
+  border: solid 1px #b3aca7;
+  border-bottom: none;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+
+  background: transparent;
+  outline: none;
+
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+
+  border: solid 1px #b3aca7;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+#submit {
+  width: 502px;
+
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #b3aca7;
+
+  outline:none;
+  cursor: pointer;
+
+  border: solid 1px #b3aca7;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #e2dedb;
+}
+#contact{
+  background: #e2dedb;
+}
+.ConTitle{
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  color: #b3aca7;
+}
+/* scroll top button */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+#footer{
+  background-color: black;
+  height: 70px;
+}
+.FooIn{
+  text-align: center;
+  color: white;
+  padding-top: 25px;
+}
