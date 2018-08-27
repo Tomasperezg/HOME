@@ -16,6 +16,10 @@
 // this is a button that will scroll you to the top of the page
 window.onscroll = function() {scrollFunction()};
 
+$('#myBtn').click( function(scrollFunction){
+    $('html, body').animate({scrollTop: 0}, 'slow');
+});
+
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("myBtn").style.display = "block";
@@ -31,9 +35,7 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-// $('#myBtn').click( function(){
-//     $('html, body').animate({scrollTop: 0}, 'slow');
-// });
+
 
 //this is the function of the SlideShow
 var SlideIndex = 0;
