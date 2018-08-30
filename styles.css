@@ -400,7 +400,7 @@ textarea:hover {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-}
+  }
 
   #NavBar{
     width: 100%;
@@ -441,5 +441,11 @@ textarea:hover {
   .info{
     margin-left: 5px;
     width: 315px;
+  }
+  .ConPic{
+    height: 270px;
+  }
+  #contact{
+    height: 700px;
   }
 }
