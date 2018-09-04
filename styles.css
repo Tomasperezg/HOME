@@ -58,12 +58,11 @@ body{
     transform: translate(-50%, -50%);
     font-size: 40px;
     text-decoration: underline;
-    font-family: 'Prompt', sans-serif;
-}
+    font-family: 'Open Sans', sans-serif;}
 /* Navigation Bar */
 #NavBar{
   text-align: center;
-  background-color: grey;
+  background-color: rgb(36,36,36);
   opacity: .6;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -72,7 +71,7 @@ body{
 #NavBar a{
   padding: 5px;
   text-decoration: none;
-  color: black;
+  color: LightGray;
   font-family: 'Karla', sans-serif;
 }
 #NavBar a:hover {
@@ -92,12 +91,20 @@ body{
 }
 /* About BBhomes */
 #logo{
+  margin-top: 30px;
   text-align: center;
 }
 .aboutBB{
-  margin-top: 17px;
+  margin-top: 25px;
+  margin-bottom: 35px;
   text-align: center;
   font-size: 19px;
+  letter-spacing: 3px;
+}
+.weR{
+  text-align: center;
+  font-size: 22px;
+  margin-top: 50px;
   letter-spacing: 3px;
 }
 /* projects page */
@@ -119,7 +126,8 @@ body{
   /* position: absolute; */
   width: 400px;
   height: 400px;
-  padding: 5px;
+  padding: 7px;
+
   transition: .5s ease;
   backface-visibility: hidden;
 }
@@ -138,7 +146,7 @@ body{
   /* opacity: 0.3; */
   border-radius: 100%;
   cursor: pointer;
-  box-shadow: 5px 5px grey;
+  /* box-shadow: 5px 5px grey; */
 }
 
 .house:hover .middle {
@@ -175,25 +183,30 @@ body{
   font-size: 15px;
   letter-spacing: 3px;
   line-height: 1.5;
-  width: 50%;
-  margin-left: 350px;
+  /* width: 50%; */
+  /* margin-left: 350px; */
   text-indent: 40px;
   font-family: 'Questrial', sans-serif;
+  text-align: center;
+  margin-left: 220px;
+  margin-right: 220px;
   padding-bottom: 20px;
 }
 #owner{
   background-color: #F5F5F5;
   border-radius: 10px;
+  height: 860px;
+  width: 100%;
 }
 /* CONTACT page */
 .ConPic{
   width: 100%;
-  height: 400px;
-  filter: opacity(70%);
+  height: 330px;
+  filter: opacity(80%);
 }
 #contact{
   /* background-color: white; */
-  height: 920px;
+  height: 800px;
 }
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
@@ -356,8 +369,8 @@ textarea:hover {
 }
 .ConTitle{
   text-align: center;
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-family: 'Lato', sans-serif;
   color: #b3aca7;
 }

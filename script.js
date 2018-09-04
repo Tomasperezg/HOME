@@ -16,10 +16,6 @@
 // this is a button that will scroll you to the top of the page
 window.onscroll = function() {scrollFunction()};
 
-$('#myBtn').click( function(scrollFunction){
-    $('html, body').animate({scrollTop: 0}, 'slow');
-});
-
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("myBtn").style.display = "block";
@@ -32,8 +28,12 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+  // this part of the code works when after }; is commented out, but has problems
+  $('#myBtn').click( function(scrollFunction){
+      $('html, body').animate({scrollTop: 0}, 'slow');
+  });
+    // document.body.scrollTop = 0;
+    // document.documentElement.scrollTop = 0;
 }
 
 
