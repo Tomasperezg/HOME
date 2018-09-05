@@ -73,6 +73,15 @@ $("a[href^='#']").click(function(e) {
 		scrollTop: position
 	} /* speed */ );
 });
+// responsive NavBar
+function myFunction() {
+    var x = document.getElementById("NavBar");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
 
 //for the form to work
 var form = $('#form'); //form id here
