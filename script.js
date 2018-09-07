@@ -82,6 +82,20 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+// this will animate the About page text
+// $('a.menu').on("click", function(){
+// $('.weR').hide().fadeIn(4000);
+// $('.aboutBB').hide().fadeIn(4000);
+// })
+// this fade in about section when scroll body
+$(window).scroll(function () {
+    var elem = $('#about');
+    setTimeout(function() {
+        elem.css({"opacity":"1","transition":"4s"});
+    },2000);
+    elem.css({"opacity":"0.0","transition":"0.5s"});
+});
+
 
 //for the form to work
 var form = $('#form'); //form id here
