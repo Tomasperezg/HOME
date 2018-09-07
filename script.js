@@ -59,7 +59,7 @@ function ShowSlides(){
     setTimeout(ShowSlides, 3000);
 }
 //this is jquery for text and picture fade animation
-$('.centered').hide().fadeIn(7500);
+$('.centered').hide().fadeIn(1500);
 $('#SlideShow').hide().fadeIn(5000);
 
 
@@ -83,18 +83,18 @@ function myFunction() {
     }
 }
 // this will animate the About page text
-// $('a.menu').on("click", function(){
-// $('.weR').hide().fadeIn(4000);
-// $('.aboutBB').hide().fadeIn(4000);
-// })
+$('a.menu').on("click", function(){
+$('.weR').hide().fadeIn(5000);
+$('.aboutBB').hide().fadeIn(5000);
+})
 // this fade in about section when scroll body
-$(window).scroll(function () {
-    var elem = $('#about');
-    setTimeout(function() {
-        elem.css({"opacity":"1","transition":"4s"});
-    },2000);
-    elem.css({"opacity":"0.0","transition":"0.5s"});
-});
+// $(window).scroll(function () {
+//     var elem = $('#about');
+//     setTimeout(function() {
+//         elem.css({"opacity":"1","transition":"4s"});
+//     },2000);
+//     elem.css({"opacity":"0.0","transition":"0.5s"});
+// });
 
 
 //for the form to work

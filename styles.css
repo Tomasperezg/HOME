@@ -4,6 +4,9 @@
 body{
   margin: 0 auto;
 }
+#home{
+  height: 750px;
+}
 #SlideShow img{
   vertical-align: middle;
   height: 750px;
@@ -28,7 +31,7 @@ body{
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
+  display: none;
   transition: background-color 0.6s ease;
 }
 .active {
@@ -56,9 +59,11 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
-    text-decoration: underline;
-    font-family: 'Open Sans', sans-serif;}
+    font-size: 45px;
+    font-family: 'Noto Serif JP', sans-serif;
+    border-bottom: 7px solid #1d191f;
+    letter-spacing: 7px;
+  }
 /* Navigation Bar */
 #NavBar{
   text-align: center;
@@ -72,6 +77,7 @@ body{
   padding: 5px;
   text-decoration: none;
   color: LightGray;
+  font-size: 20px;
   font-family: 'Karla', sans-serif;
 }
 #NavBar a:hover {
@@ -115,23 +121,34 @@ body{
 
 /* About BBhomes */
 #logo{
-  margin-top: 30px;
+  /* margin-top: 30px; */
   text-align: center;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   margin-bottom: 60px;
+  padding-top: 65px;
 }
 .aboutBB{
   margin-top: 25px;
   margin-bottom: 65px;
   text-align: center;
-  font-size: 19px;
+  font-size: 20px;
   letter-spacing: 3px;
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .weR{
   text-align: center;
-  font-size: 22px;
+  font-size: 25px;
   margin-top: 50px;
   letter-spacing: 3px;
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: underline;
+
+}
+#about{
+  height: 840px;
+  background-color: #222;
 }
 /* projects page */
 #Pro{
@@ -180,11 +197,19 @@ body{
 }
 
 .text {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
+  /* background-color: #4CAF50; */
+  color: black;
+  font-size: 30px;
   padding: 16px 32px;
+  /* font-family: 'Tangerine', cursive; */
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  /* font-size: 92px; */
+  /* padding: 80px 50px; */
+  /* text-align: center; */
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
 }
+
 /* meet the owner page */
 .profile{
   text-align: center;
