@@ -1,40 +1,40 @@
 //this will keep the sticky navbar (not working at this moment)
-// window.onscroll= function () {
-//   myFunction()
-// };
-// var navbar = document.getElementById('NavBar');
-// var sticky = navbar.offsetTop;
-//
-// function myFunction(){
-//   if(window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   }
-//   else{
-//     navbar.classList.remove("sticky");
-//   }
-// }
-// this is a button that will scroll you to the top of the page
-window.onscroll = function() {scrollFunction()};
+window.onscroll= function () {
+  myFunction()
+};
+var navbar = document.getElementById('NavBar');
+var sticky = navbar.offsetTop;
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-
+function myFunction(){
+  if(window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  }
+  else{
+    navbar.classList.remove("sticky");
+  }
 }
+// this is a button that will scroll you to the top of the page
+// window.onscroll = function() {scrollFunction()};
+
+// function scrollFunction() {
+//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//         document.getElementById("myBtn").style.display = "block";
+//     } else {
+//         document.getElementById("myBtn").style.display = "none";
+//     }
+//
+// }
 
 
 // When the user clicks on the button, scroll to the top of the document
-function topFunction() {
+// function topFunction() {
   // this part of the code works when after }; is commented out, but has problems
-  $('#myBtn').click( function(scrollFunction){
-      $('html, body').animate({scrollTop: 0}, 'slow');
-  });
+  // $('#myBtn').click( function(scrollFunction){
+  //     $('html, body').animate({scrollTop: 0}, 'slow');
+  // });
     // document.body.scrollTop = 0;
     // document.documentElement.scrollTop = 0;
-}
+// }
 
 
 //this is the function of the SlideShow
@@ -73,7 +73,7 @@ $("a[href^='#']").click(function(e) {
 		scrollTop: position
 	} /* speed */ );
 });
-// responsive NavBar
+// responsive NavBar when on phone version
 function myFunction() {
     var x = document.getElementById("NavBar");
     if (x.className === "topnav") {
