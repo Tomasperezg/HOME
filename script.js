@@ -78,9 +78,24 @@ function myFunction() {
     var x = document.getElementById("NavBar");
     if (x.className === "topnav") {
         x.className += " responsive";
-    } else {
-        x.className = "topnav";
     }
+    else if (x.className += "responsive"){
+      $(".topnav.responsive a.icon").css({"display": "none"});
+    }
+    else{
+      x.className === "topnav";
+    }
+}
+
+function myFunction2(){
+  var y = document.getElementById("NavBar");
+  if (y.className === "topnav"){
+    $(".topnav.responsive a.icon").css({"display": "none"});
+
+  }
+  else {
+    y.className = "topnav";
+  }
 }
 // this will animate the About page text
 $('a.menu').on("click", function(){

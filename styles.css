@@ -80,6 +80,12 @@ body{
   font-size: 20px;
   font-family: 'Karla', sans-serif;
 }
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
 #NavBar a:hover {
   color: white;
 }
@@ -97,7 +103,9 @@ body{
   }
 }
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -108,6 +116,14 @@ body{
     display: block;
     text-align: left;
   }
+  
+
+  a.icon2{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
 }
 .sticky div{
   position: fixed;
@@ -475,7 +491,7 @@ textarea:hover {
     width: 100%;
   }
   #NavBar a{
-    font-size: 11px;
+    font-size: 19px;
     padding-right: 0px;
   }
   #SlideShow img{
