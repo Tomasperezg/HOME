@@ -1,18 +1,18 @@
 //this will keep the sticky navbar (not working at this moment)
-window.onscroll= function () {
-  myFunction()
-};
-var navbar = document.getElementById('NavBar');
-var sticky = navbar.offsetTop;
-
-function myFunction(){
-  if(window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  }
-  else{
-    navbar.classList.remove("sticky");
-  }
-}
+// window.onscroll= function () {
+//   myFunction()
+// };
+// var navbar = document.getElementById('NavBar');
+// var sticky = navbar.offsetTop;
+//
+// function myFunction(){
+//   if(window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky")
+//   }
+//   else{
+//     navbar.classList.remove("sticky");
+//   }
+// }
 // this is a button that will scroll you to the top of the page
 // window.onscroll = function() {scrollFunction()};
 
@@ -74,29 +74,22 @@ $("a[href^='#']").click(function(e) {
 	} /* speed */ );
 });
 // responsive NavBar when on phone version
-function myFunction() {
+function openNav() {
     var x = document.getElementById("NavBar");
     if (x.className === "topnav") {
         x.className += " responsive";
-    }
-    else if (x.className += "responsive"){
-      $(".topnav.responsive a.icon").css({"display": "none"});
-    }
-    else{
-      x.className === "topnav";
+        document.getElementById("NavBar").style.height = "100%";
+    } else {
+        x.className = "topnav";
+        document.getElementById("NavBar").style.height = "6%";
     }
 }
 
-function myFunction2(){
-  var y = document.getElementById("NavBar");
-  if (y.className === "topnav"){
-    $(".topnav.responsive a.icon").css({"display": "none"});
+$('.icon').click(function() {
+    $('#display_advance').toggle('1000');
+    $("i", this).toggleClass("icon-circle-arrow-up icon-circle-arrow-down");
+});
 
-  }
-  else {
-    y.className = "topnav";
-  }
-}
 // this will animate the About page text
 $('a.menu').on("click", function(){
 $('.weR').hide().fadeIn(5000);

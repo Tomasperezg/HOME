@@ -12,21 +12,20 @@
 
   <!--This is the Navigation Bar  -->
 
-  <div class="topnav" id="NavBar" class="nav-dropdown">
-      <!-- <div class="nav-dropdown"> -->
-        <a href="#home" active="" >HOME</a>
-        <a href="#about" class="menu">ABOUT BLACKBIRD</a>
-        <a href="#projects">PORTFOLIO</a>
-        <a href="#owner">PROFILE</a>
-        <a href="#contact">CONTACT US</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-        </a>
-        <a href="javascript:void(0);" class="icon2" onclick="myFunction2()">
-            <i class="fa fa-times"></i>
-        </a>
-      <!-- </div> -->
+  <div class="topnav" id="NavBar">
+    <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+      <div class="topnav-content">
+          <a href="#home" active="" ><i class="fa fa-fw fa-home"></i>HOME</a>
+          <a href="#about" class="menu"><i class="fa fa-id-badge"></i>ABOUT BLACKBIRD</a>
+          <a href="#projects"><i class="fa fa-archive"></i>PORTFOLIO</a>
+          <a href="#owner"><i class="fa fa-female"></i>PROFILE</a>
+          <a href="#contact"><i class="fa fa-envelope"></i>CONTACT US</a>
+          <a href="javascript:void(0);" class="icon" onclick="openNav()">
+          <i class="fa fa-bars"></i></a>
+      </div>
   </div>
+  <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> -->
+
 <!--This is the Slide Show at the top of the page  -->
 
   <section id="home">
@@ -129,7 +128,7 @@ To create beautiful homes that will bring comfort and inspiration.
 </section>
 
 <!--this is the scroll to top button  -->
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<!-- <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> -->
 
 <!-- this is the owner profile -->
 
@@ -170,6 +169,5 @@ To create beautiful homes that will bring comfort and inspiration.
 
 
   <script src="script.js"></script>
-  <!-- <script src="lightbox-plus-jquery.min.css"></script> -->
 </body>
 </html>
