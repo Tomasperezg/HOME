@@ -1,18 +1,16 @@
 //this will keep the sticky navbar (not working at this moment)
-// window.onscroll= function () {
-//   myFunction()
-// };
-// var navbar = document.getElementById('NavBar');
-// var sticky = navbar.offsetTop;
-//
-// function myFunction(){
-//   if(window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   }
-//   else{
-//     navbar.classList.remove("sticky");
-//   }
-// }
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("NavBar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 // this is a button that will scroll you to the top of the page
 // window.onscroll = function() {scrollFunction()};
 
@@ -81,7 +79,7 @@ function openNav() {
         document.getElementById("NavBar").style.height = "100%";
     } else {
         x.className = "topnav";
-        document.getElementById("NavBar").style.height = "6%";
+        document.getElementById("NavBar").style.height = "3%";
     }
 }
 
