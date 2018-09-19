@@ -1,15 +1,63 @@
+
 <?php
-ini_set("mail.log", "/tmp/mail.log");
-ini_set("mail.add_x_header", TRUE);
-//variables
-$name = strip_tags(htmlspecialchars($_POST['Name']));
-$email_address = strip_tags(htmlspecialchars($_POST['Email']));
-$message = strip_tags(htmlspecialchars($_POST['Message']));
-// Create the email and send the message
-$to = 'perezgantomas@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from example... contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nMessage:\n$message";
-$headers = "From: donoreplytothisemail@gmail.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";
-if(mail($to,$email_subject,$email_body,$headers)){ echo "Mail sent!";} else{ echo "Error, check your logs."; }
-return true;
+    //Pulling values that were entered into the form.
+$name = $_POST['visitorName'];
+$email = $_POST['visitorEmail'];
+$message = $POST['visitorMsg'];
+
+//Structure of email that I will receive with the form info
+$email_from = "donoreplytothisemail@gmail.com";
+$email_subject = 'New Contact Form Message';
+$email_body = "You have received a new message from $name. \n".
+                "Here is the message: \n $message".
+
+//Sending to my email address and using the mail function
+    $to = "perezgantomas@gmail.com";
+$headers = "From: $email_from \r\n";
+$headers .= "Reply-To: $email \r\n";
+mail($to,$email_subject,$email_body,$headers);
+
+//Validating the form
+function IsInjected($str)
+{
+    $injections = array('(\n+)',
+                        '(\r+)',
+                        '(\t+)',
+                        '(\%0A+)',
+                        '(\%0D+)',
+                        '(\%08+)',
+                        '(\%09+)',
+                        );
+    $inject = join('|', $injections);
+    $inject = "/$inject/i";
+
+    if(preg_match($inject,$str))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
+}
+
+if(IsInjected($email))
+{
+    echo "Bad email value!";
+    exit;
+}
+
+
+
+
+
+?>
+
+//HTML confirmation that message was sent.
+    <html lang='en'>
+    <h1>Your email has been sent. Thank-you!</h1>
+
+
+
+    </html>

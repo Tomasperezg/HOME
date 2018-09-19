@@ -11,29 +11,6 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
-// this is a button that will scroll you to the top of the page
-// window.onscroll = function() {scrollFunction()};
-
-// function scrollFunction() {
-//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//         document.getElementById("myBtn").style.display = "block";
-//     } else {
-//         document.getElementById("myBtn").style.display = "none";
-//     }
-//
-// }
-
-
-// When the user clicks on the button, scroll to the top of the document
-// function topFunction() {
-  // this part of the code works when after }; is commented out, but has problems
-  // $('#myBtn').click( function(scrollFunction){
-  //     $('html, body').animate({scrollTop: 0}, 'slow');
-  // });
-    // document.body.scrollTop = 0;
-    // document.documentElement.scrollTop = 0;
-// }
-
 
 //this is the function of the SlideShow
 var SlideIndex = 0;
@@ -71,15 +48,19 @@ $("a[href^='#']").click(function(e) {
 		scrollTop: position
 	} /* speed */ );
 });
+
+$('a #NavBar').click(function(){
+    $(this).addClass("act");
+});
 // responsive NavBar when on phone version
 function openNav() {
     var x = document.getElementById("NavBar");
     if (x.className === "topnav") {
-        x.className += " responsive";
         document.getElementById("NavBar").style.height = "100%";
+        x.className += " responsive";
     } else {
         x.className = "topnav";
-        document.getElementById("NavBar").style.height = "3%";
+        document.getElementById("NavBar").style.height = "4%";
     }
 }
 
@@ -93,38 +74,3 @@ $('a.menu').on("click", function(){
 $('.weR').hide().fadeIn(5000);
 $('.aboutBB').hide().fadeIn(5000);
 })
-// this fade in about section when scroll body
-// $(window).scroll(function () {
-//     var elem = $('#about');
-//     setTimeout(function() {
-//         elem.css({"opacity":"1","transition":"4s"});
-//     },2000);
-//     elem.css({"opacity":"0.0","transition":"0.5s"});
-// });
-
-
-//for the form to work
-var form = $('#form'); //form id here
-form.submit(function(event) {
-event.preventDefault();
-var form_status = $('<div class="form_status"></div>');
-var $form = $(this);
-$.ajax({
-type: 'POST',
-url: "form.php",
-data: {
-Name: $("#name").val(),
-Email: $("#email").val(),
-Message: $("#message").val()
-},
-beforeSend: function() {
-form.append(form_status.html('Email is sending...').fadeIn());
-}
-}).done(function(data) {
-form_status.html('Email Sent!').delay(3210).fadeOut();
-});
-//delete messages when submit
-document.getElementById("name").value = "";
-document.getElementById("email").value = "";
-document.getElementById("message").value = "";
-});

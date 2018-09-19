@@ -15,7 +15,7 @@
   <div class="topnav" id="NavBar">
     <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
       <div class="topnav-content">
-          <a href="#home" active="" >HOME</a>
+          <a href="#home" active="act" >HOME</a>
           <a href="#about" class="menu">ABOUT BLACKBIRD</a>
           <a href="#projects">PORTFOLIO</a>
           <a href="#owner">PROFILE</a>
@@ -55,17 +55,26 @@
 <!--About BlackBird  -->
 
 <section id="about">
-<div id="logo">
-  <img src="https://static.wixstatic.com/media/fbfd5e_d5f4df98682d416c88f190c4b9d980a9~mv2.jpeg/v1/fill/w_170,h_138,al_c,q_80,usm_0.66_1.00_0.01/fbfd5e_d5f4df98682d416c88f190c4b9d980a9~mv2.webp" alt="BLACKBIRD logo">
+  
+<div id="theInfo">
+
+    <div id="logo">
+      <img src="https://static.wixstatic.com/media/fbfd5e_d5f4df98682d416c88f190c4b9d980a9~mv2.jpeg/v1/fill/w_170,h_138,al_c,q_80,usm_0.66_1.00_0.01/fbfd5e_d5f4df98682d416c88f190c4b9d980a9~mv2.webp" alt="BLACKBIRD logo">
+    </div>
+
+    <div class="weR">WHO ARE WE?</div>
+
+    <div class="aboutBB">
+    Blackbird Homes is a local, home renovation company. <br>
+    </div>
+    <div class="weR">OUR MISSION</div>
+
+    <div class="aboutBB">
+    To create beautiful homes that will bring comfort and inspiration.
+    </div>
+
 </div>
-<div class="weR">WHO ARE WE?</div>
-<div class="aboutBB">
-Blackbird Homes is a local, home renovation company. <br>
-</div>
-<div class="weR">OUR MISSION</div>
-<div class="aboutBB">
-To create beautiful homes that will bring comfort and inspiration.
-</div>
+
 </section>
 
 <!-- Projects -->
@@ -154,12 +163,12 @@ To create beautiful homes that will bring comfort and inspiration.
 
   <div class="ConTitle">BLACKBIRD HOMES</div>
 
-  <form id="form" class="topBefore" method="post" action="form.php">
+  <form id="form" class="topBefore" method="post" action='form.php'>
 
-		  <input id="name" type="text" placeholder="NAME">
-		  <input id="email" type="text" placeholder="E-MAIL">
-		  <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-      <input id="submit" type="submit" value="GO!">
+		  <input id="name" type="text" name="visitorName" placeholder="NAME" required>
+		  <input id="email" type="text"  name="visitorEmail" placeholder="E-MAIL" required>
+		  <textarea id="message" type="text" name="visitorMsg" placeholder="MESSAGE" required></textarea>
+      <input id="submit" type="submit" value="GO!" required>
   </form>
 
 </section>
