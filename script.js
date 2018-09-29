@@ -74,3 +74,21 @@ $('a.menu').on("click", function(){
 $('.weR').hide().fadeIn(5000);
 $('.aboutBB').hide().fadeIn(5000);
 })
+
+// lightbox function
+$('.image').click(function(){
+  $('body').toggleClass('LB');
+  $('.LB').css({"display": "block"});
+  $('.imgLB').css({"display": "block"});
+  $('.closeLB').css({"display": "block"});
+});
+
+$('.closeLB').click(function(){
+  $('body.LB').css({"display": "none"});
+  $('body.imgLB').css({"display": "none"});
+  $('body.closeLB').css({"display": "none"});
+})
+
+// $('.LB').click(function(){
+//   $('body.LB').css({"display": "none"});
+// });

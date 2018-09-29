@@ -168,7 +168,7 @@ body{
 
 }
 #about{
-  padding-top: 80px;
+  padding-top: 100px;
   height: 840px;
   background-color: rgb(208, 236, 224));
 }
@@ -187,14 +187,12 @@ body{
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 90px;
-  /* position: absolute; */
+  position: relative;
 }
 .image{
-  /* position: absolute; */
   width: 400px;
   height: 400px;
   padding: 7px;
-
   transition: .5s ease;
   backface-visibility: hidden;
 }
@@ -203,11 +201,7 @@ body{
   transition: .5s ease;
   opacity: 0;
   position: relative;
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
-  /* -ms-transform: translate(-50%, -50%); */
-   text-align: center;
+  text-align: center;
 }
 #projects{
   background-color: rgb(254, 254, 254);
@@ -224,25 +218,53 @@ body{
 }
 
 .text {
-  /* background-color: #4CAF50; */
   color: black;
   font-size: 30px;
   padding: 16px 32px;
-  /* font-family: 'Tangerine', cursive; */
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  /* font-size: 92px; */
-  /* padding: 80px 50px; */
-  /* text-align: center; */
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
 }
 
+
+/* lightbox */
+.LB{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  display: none;
+  z-index: 1;
+}
+.imgLB{
+  top: 0;
+  right: 0;
+  opacity: 0.9;
+  display: none;
+  z-index: 1;
+}
+.closeLB{
+  position: absolute;
+  font-size: 20px;
+  color: black;
+  opacity: 0.9;
+  display: none;
+  border: none;
+  text-align: center;
+  width: 150px;
+  margin-left: 1250px;
+  z-index: 1;
+}
 /* meet the owner page */
 .profile{
   text-align: center;
   margin-top: 40px;
   margin-bottom: 40px;
   font-size: 25px;
+  display: none;
 }
 .OwnerPic{
   display: block;
@@ -263,8 +285,6 @@ body{
   font-size: 15px;
   letter-spacing: 3px;
   line-height: 1.5;
-  /* width: 50%; */
-  /* margin-left: 350px; */
   text-indent: 40px;
   font-family: 'Questrial', sans-serif;
   text-align: center;
@@ -273,6 +293,7 @@ body{
   padding-bottom: 20px;
 }
 #owner{
+  padding-top: 100px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   height: 860px;
@@ -288,6 +309,7 @@ body{
   /* background-color: white; */
   height: 760px;
 }
+
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -465,8 +487,9 @@ textarea:hover {
   text-align: center;
   color: white;
   padding-top: 25px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Questrial', sans-serif;
 }
+/*lightbox  */
 
 /* small phone definition */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
