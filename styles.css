@@ -142,9 +142,7 @@ body{
   box-shadow: 5px 5px 5px 2px LightGray;
 }
 #logo{
-  /* margin-top: 30px; */
   text-align: center;
-  /* margin-top: 60px; */
   margin-bottom: 60px;
   padding-top: 65px;
 }
@@ -164,8 +162,6 @@ body{
   letter-spacing: 3px;
   color: black;
   font-family: 'Source Sans Pro', sans-serif;
-  /* text-decoration: underline; */
-
 }
 #about{
   padding-top: 100px;
@@ -186,12 +182,18 @@ body{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 90px;
-  position: relative;
+  justify-content: center;
 }
 .image{
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
+  padding: 7px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.other{
+  width: 300px;
+  height: 300px;
   padding: 7px;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -207,10 +209,8 @@ body{
   background-color: rgb(254, 254, 254);
 }
 .house:hover .image {
-  /* opacity: 0.3; */
   border-radius: 100%;
   cursor: pointer;
-  /* box-shadow: 5px 5px grey; */
 }
 
 .house:hover .middle {
@@ -225,38 +225,44 @@ body{
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
 }
-
-
 /* lightbox */
 .LB{
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.1;
-  background-color: black;
-  height: 100%;
-  width: 100%;
   display: none;
-  z-index: 1;
 }
-.imgLB{
-  top: 0;
-  right: 0;
-  opacity: 0.9;
-  display: none;
-  z-index: 1;
+.LBImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.LB h1{
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  padding-bottom: 20px;
+  padding-top: 35px;
+  font-family: 'Open Sans Condensed', sans-serif;
+
 }
 .closeLB{
   position: absolute;
-  font-size: 20px;
-  color: black;
+  font-size: 40px;
+  color: LightGray;
   opacity: 0.9;
   display: none;
-  border: none;
   text-align: center;
   width: 150px;
-  margin-left: 1250px;
-  z-index: 1;
+  z-index: 10;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+.closeLB:hover{
+  color: red;
+  font-size: 43px;
 }
 /* meet the owner page */
 .profile{
@@ -306,7 +312,6 @@ body{
   filter: opacity(80%);
 }
 #contact{
-  /* background-color: white; */
   height: 760px;
 }
 
@@ -489,7 +494,6 @@ textarea:hover {
   padding-top: 25px;
   font-family: 'Questrial', sans-serif;
 }
-/*lightbox  */
 
 /* small phone definition */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {

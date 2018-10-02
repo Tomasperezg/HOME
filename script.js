@@ -76,19 +76,22 @@ $('.aboutBB').hide().fadeIn(5000);
 })
 
 // lightbox function
-$('.image').click(function(){
-  $('body').toggleClass('LB');
-  $('.LB').css({"display": "block"});
-  $('.imgLB').css({"display": "block"});
-  $('.closeLB').css({"display": "block"});
+$(document).ready(function(){
+    $('.image').click(function(){
+      $('.closeLB').css({"display": "block"});
+      $('.LB').css({
+      "display": "block",
+      "background-color": "black",
+      "position": "absolute",
+      "width": "100%",
+      "height": "840px",
+      "z-index": "1",
+      "opacity": "0.9",
+    });
+    $(".LB").focus();
+    });
+    $(".closeLB").click(function(){
+    $(".LB").hide(1000);
+    $(".closeLB").hide(1000);
+  });
 });
-
-$('.closeLB').click(function(){
-  $('body.LB').css({"display": "none"});
-  $('body.imgLB').css({"display": "none"});
-  $('body.closeLB').css({"display": "none"});
-})
-
-// $('.LB').click(function(){
-//   $('body.LB').css({"display": "none"});
-// });
