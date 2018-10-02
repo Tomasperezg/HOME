@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BlackBirdHomes</title>
 </head>
@@ -15,11 +15,11 @@
   <div class="topnav" id="NavBar">
     <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
       <div class="topnav-content">
-          <a href="#home" active="act" >HOME</a>
-          <a href="#about" class="menu">ABOUT BLACKBIRD</a>
-          <a href="#projects">PORTFOLIO</a>
-          <a href="#owner">PROFILE</a>
-          <a href="#contact">CONTACT US</a>
+          <a class="menua" href="#home">HOME</a>
+          <a class="menua" href="#about" class="menu">ABOUT BLACKBIRD</a>
+          <a class="menua" href="#projects">PORTFOLIO</a>
+          <a class="menua" href="#owner">PROFILE</a>
+          <a class="menua" href="#contact">CONTACT US</a>
           <a href="javascript:void(0);" class="icon" onclick="openNav()">
           <i class="fa fa-bars"></i></a>
       </div>
@@ -83,12 +83,21 @@
 
 <div id="Pro">PORTFOLIO</div>
    <div id="homes">
+     <!--lightbox  -->
      <button class="closeLB">X</button>
-
      <div class="LB">
        <h1>Indian Trail</h1>
        <img class="LBImage" src="house/6.jpg" alt="house6">
+       <img class="LBImage" src="house/5.jpg" alt="house6">
+       <img class="LBImage" src="house/4.jpg" alt="house6">
+
+       <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+       <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+
+      <h3 class="Iinfo">2145 Indian Trail-Mid-century mess to mid-century magnificence.</h3>
+      <h3 class="Iinfo">In the main living area, the ceilings were vaulted and walls removed to create a large living area separated only by a double fireplace.  Lighting and plumbing fixtures will bring back memories for most baby boomers.  A master suite was created, and a powder room was added to the main living area.</h3>
      </div>
+     <!--  -->
     <div class="house">
       <img class="image" src="house/1.jpg" alt="house">
       <!-- <imput type="image" class="image" src="house/1.jpg" alt="house"> -->

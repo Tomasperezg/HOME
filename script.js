@@ -60,8 +60,11 @@ function openNav() {
         x.className += " responsive";
     } else {
         x.className = "topnav";
-        document.getElementById("NavBar").style.height = "4%";
+        document.getElementById("NavBar").style.height = "10%";
     }
+    $(".menua").click(function() {
+         $("#NavBar").hide(1000);
+    });
 }
 
 $('.icon').click(function() {
@@ -95,3 +98,21 @@ $(document).ready(function(){
     $(".closeLB").hide(1000);
   });
 });
+// lightbox images
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("LBImage");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}

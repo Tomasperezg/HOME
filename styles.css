@@ -234,15 +234,24 @@ body{
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  height: 350px;
 }
 .LB h1{
   text-align: center;
   color: white;
   font-size: 25px;
   padding-bottom: 20px;
-  padding-top: 35px;
+  padding-top: 45px;
   font-family: 'Open Sans Condensed', sans-serif;
-
+}
+.Iinfo{
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 .closeLB{
   position: absolute;
@@ -506,11 +515,18 @@ textarea:hover {
   }
 
   #NavBar{
-    width: 100%;
+    /* width: 100%; */
+  }
+  .icon{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    margin-left: 60px;
   }
   #NavBar a{
     font-size: 19px;
     padding-right: 0px;
+    padding-left: Opx;
   }
   #SlideShow img{
     width: 350px;
@@ -524,6 +540,10 @@ textarea:hover {
     letter-spacing: 2px;
     border-bottom: 4px black;
   }
+  #theInfo{
+    border: none;
+    width: 320px;
+  }
   #logo{
     margin-left: auto;
     margin-right: auto;
@@ -533,27 +553,28 @@ textarea:hover {
   }
   .weR{
     font-size: 17px;
+    text-align: center;
   }
   .aboutBB{
     text-align: center;
     font-size: 15px;
-    margin-top: 40px;
-    margin-bottom: 100px;
     line-height: 1.5;
+    box-shadow: none;
   }
   #about{
-    height: 600px;
+    height: 520px;
+    padding-top: 20px;
   }
   #homes{
     margin-left: 0px;
   }
   #owner{
     height: 1116px;
+    padding-top: 0;
   }
   .image{
-    width: 323px;
-    height: 400px;
-    padding-left: 0;
+    width: 300px;
+    height: 300px;
   }
   .OwnerPic{
     margin-left: 70px;
@@ -567,6 +588,22 @@ textarea:hover {
     width: 360px;
   }
   #contact{
-    height: 700px;
+    height: 560px;
+  }
+  #form{
+    background-color: none;
+    border: none;
+  }
+  #name{
+    width: 320px;
+  }
+  #submit{
+    width: 320px;
+  }
+  #message{
+    width: 320px;
+  }
+  #email{
+    width: 320px;
   }
 }
