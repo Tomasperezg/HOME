@@ -410,7 +410,7 @@ header {
 
 #form {
   position: relative;
-  width: 500px;
+  width: 470px;
   margin: 50px auto 100px auto;
   box-shadow: 5px 5px 5px 2px LightGray;
 }
@@ -461,18 +461,13 @@ textarea:hover {
 }
 
 #submit {
-  width: 502px;
-
   padding: 0;
   margin: -5px 0px 0px 0px;
-
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
   color: #b3aca7;
-
   outline:none;
   cursor: pointer;
-
   border: solid 1px #b3aca7;
   border-top: none;
 }
@@ -505,7 +500,7 @@ textarea:hover {
 }
 
 /* small phone definition */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 359px) {
     html,body  {
     width: 100%;
     height: 100%;
@@ -515,13 +510,12 @@ textarea:hover {
   }
 
   #NavBar{
-    /* width: 100%; */
   }
   .icon{
     width: 30px;
     height: 30px;
-    background-color: white;
-    margin-left: 60px;
+    /* background-color: white; */
+    margin-right: 30px;
   }
   #NavBar a{
     font-size: 19px;
@@ -542,6 +536,8 @@ textarea:hover {
   }
   #theInfo{
     border: none;
+    width: 320px;
+    box-shadow: none;
     width: 320px;
   }
   #logo{
@@ -605,5 +601,68 @@ textarea:hover {
   }
   #email{
     width: 320px;
+  }
+}
+@media only screen
+and (min-device-width : 375px) and (max-device-width : 812px) {
+    html,body  {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  #about{
+    height: 725px;
+  }
+  #home{
+    height: 400px;
+  }
+  #SlideShow img{
+    width: 100%;
+    height: 520px;
+  }
+  .centered{
+    font-size: 18px;
+    border-bottom: 6px black;
+    letter-spacing: 2px;
+  }
+  #NavBar{
+    width: 100%;
+  }
+  #owner{
+    height: 940px;
+  }
+  #theInfo{
+    border: none;
+    width: 100%;
+    box-shadow: none;
+  }
+  .aboutBB{
+    font-size: 14px;
+  }
+  .info{
+    margin-left: 5px;
+    margin-right: 5px;
+    letter-spacing: 1px;
+    text-align: justify;
+  }
+  #contact{
+    height: 550px;
+  }
+  .ConPic{
+    height: 170px;
+  }
+  #name{
+    width: 375px;
+  }
+  #email{
+    width: 375px;
+  }
+  #message{
+    width: 375px;
+  }
+  #submit{
+    width: 375px;
   }
 }

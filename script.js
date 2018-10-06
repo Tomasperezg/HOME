@@ -60,22 +60,19 @@ function openNav() {
         x.className += " responsive";
     } else {
         x.className = "topnav";
-        document.getElementById("NavBar").style.height = "10%";
+        document.getElementById("NavBar").style.height = "60px";
     }
-    $(".menua").click(function() {
-         $("#NavBar").hide(1000);
-    });
-}
 
-$('.icon').click(function() {
-    $('#display_advance').toggle('1000');
-    $("i", this).toggleClass("icon-circle-arrow-up icon-circle-arrow-down");
+  $('.menua').click(function() {
+  $('.topnav').slideToggle('slow');
 });
+
+}
 
 // this will animate the About page text
 $('a.menu').on("click", function(){
-$('.weR').hide().fadeIn(5000);
-$('.aboutBB').hide().fadeIn(5000);
+$('.weR').hide().fadeIn(3000);
+$('.aboutBB').hide().fadeIn(3000);
 })
 
 // lightbox function
