@@ -243,6 +243,7 @@ body{
   padding-bottom: 20px;
   padding-top: 45px;
   font-family: 'Open Sans Condensed', sans-serif;
+  position: inherit;
 }
 .Iinfo{
   color: white;
@@ -254,7 +255,7 @@ body{
   margin-right: 100px;
 }
 .closeLB{
-  position: absolute;
+  position: inherit;
   font-size: 40px;
   color: LightGray;
   opacity: 0.9;
@@ -664,5 +665,22 @@ and (min-device-width : 375px) and (max-device-width : 812px) {
   }
   #submit{
     width: 375px;
+  }
+  .LBImage{
+    width: 100%;
+    height: 400px;
+  }
+  .Iinfo{
+    font-size: 15px;
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  h3.Iinfo{
+    text-align: center;
+    font-size: 18px;
+  }
+  h4.Iinfo{
+    text-indent: 12px;
   }
 }

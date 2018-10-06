@@ -82,7 +82,7 @@ $(document).ready(function(){
       $('.LB').css({
       "display": "block",
       "background-color": "black",
-      "position": "absolute",
+      "position": "inherit",
       "width": "100%",
       "height": "840px",
       "z-index": "1",
@@ -113,3 +113,6 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
 }
+$('.closeLB').click(function() {
+$('.LB').slideToggle('slow');
+});
