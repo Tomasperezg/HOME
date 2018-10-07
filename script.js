@@ -52,6 +52,7 @@ $("a[href^='#']").click(function(e) {
 $('a #NavBar').click(function(){
     $(this).addClass("act");
 });
+
 // responsive NavBar when on phone version
 function openNav() {
     var x = document.getElementById("NavBar");
@@ -63,11 +64,8 @@ function openNav() {
         document.getElementById("NavBar").style.height = "60px";
     }
 
-  $('.menua').click(function() {
-  $('.topnav').slideToggle('slow');
-});
-
 }
+
 
 // this will animate the About page text
 $('a.menu').on("click", function(){

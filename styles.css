@@ -99,7 +99,9 @@ body{
     display: none;
 }
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -500,7 +502,7 @@ textarea:hover {
   font-family: 'Questrial', sans-serif;
 }
 
-/* small phone definition */
+/* small iphone 5 definition */
 @media only screen and (min-device-width : 320px) and (max-device-width : 359px) {
     html,body  {
     width: 100%;
@@ -515,7 +517,6 @@ textarea:hover {
   .icon{
     width: 30px;
     height: 30px;
-    /* background-color: white; */
     margin-right: 30px;
   }
   #NavBar a{
@@ -566,7 +567,7 @@ textarea:hover {
     margin-left: 0px;
   }
   #owner{
-    height: 1116px;
+    height: 960px;
     padding-top: 0;
   }
   .image{
@@ -578,6 +579,9 @@ textarea:hover {
   }
   .info{
     margin-left: 5px;
+    margin-right: 5px;
+    letter-spacing: 1px;
+    text-align: left;
     width: 315px;
   }
   .ConPic{
