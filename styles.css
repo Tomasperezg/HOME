@@ -238,6 +238,7 @@ body{
   width: 50%;
   height: 350px;
 }
+
 .LB h1{
   text-align: center;
   color: white;
@@ -608,6 +609,7 @@ textarea:hover {
     width: 320px;
   }
 }
+/*iphone 6/7/8  */
 @media only screen
 and (min-device-width : 375px) and (max-device-width : 812px) {
     html,body  {
@@ -645,6 +647,11 @@ and (min-device-width : 375px) and (max-device-width : 812px) {
   }
   .aboutBB{
     font-size: 14px;
+  }
+  .w3-display-right{
+    background-color: white;
+    position: inherit;
+    right: 0;
   }
   .info{
     margin-left: 5px;

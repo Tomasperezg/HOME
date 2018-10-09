@@ -74,43 +74,44 @@ $('.aboutBB').hide().fadeIn(3000);
 })
 
 // lightbox function
-$(document).ready(function(){
-    $('.image').click(function(){
-      $('.closeLB').css({"display": "block"});
-      $('.LB').css({
-      "display": "block",
-      "background-color": "black",
-      "position": "inherit",
-      "width": "100%",
-      "height": "840px",
-      "z-index": "1",
-      "opacity": "0.9",
-    });
-    $(".LB").focus();
-    });
-    $(".closeLB").click(function(){
-    $(".LB").hide(1000);
-    $(".closeLB").hide(1000);
-  });
-});
-// lightbox images
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("LBImage");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-$('.closeLB').click(function() {
-$('.LB').slideToggle('slow');
-});
+// $(document).ready(function(){
+//     $('.image').click(function(){
+//       $('.closeLB').css({"display": "block"});
+//       $('.LB').css({
+//       "display": "block",
+//       "background-color": "black",
+//       "position": "inherit",
+//       "width": "100%",
+//       "height": "840px",
+//       "z-index": "1",
+//       "opacity": "0.9",
+//     });
+//     $(".LB").focus();
+//     });
+//     $(".closeLB").click(function(){
+//     $(".LB").hide(1000);
+//     $(".closeLB").hide(1000);
+//   });
+// });
+//
+// // lightbox images
+// var slideIndex = 1;
+// showDivs(slideIndex);
+//
+// function plusDivs(n) {
+//   showDivs(slideIndex += n);
+// }
+//
+// function showDivs(n) {
+//   var i;
+//   var x = document.getElementsByClassName("LBImage");
+//   if (n > x.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = x.length}
+//   for (i = 0; i < x.length; i++) {
+//      x[i].style.display = "none";
+//   }
+//   x[slideIndex-1].style.display = "block";
+// }
+// $('.closeLB').click(function() {
+// $('.LB').slideToggle('slow');
+// });
