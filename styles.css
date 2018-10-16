@@ -228,54 +228,93 @@ body{
   text-rendering: optimizeLegibility;
 }
 /* lightbox */
-.LB{
+.Home1Body{
+  border-style: solid;
+  border-color: LightGray;
+  border-width: 12px;
+  height: 100%;
+}
+.GoBack{
+  display: flex;
+  justify-content: flex-end;
+}
+.TheLogo img{
+  width: 100px;
+  margin-left: 40px;
+  margin-top: 10px;
+  padding: 2px;
+}
+#HomeOne{
+  position: relative;
+}
+.ThePics{
   display: none;
-}
-.LBImage{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 350px;
-}
-
-.LB h1{
   text-align: center;
+}
+.ThePcImg{
+  width: 550px;
+  height: 370px;
+}
+.TheThPic:hover{
+  cursor: pointer;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-style: hidden;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  margin-right: 445px;
+}
+.prev{
+  margin-left: 432px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.numberI {
   color: white;
   font-size: 25px;
-  padding-bottom: 20px;
-  padding-top: 45px;
-  font-family: 'Open Sans Condensed', sans-serif;
-  position: inherit;
+  padding: 8px 12px;
+  position: absolute;
+  margin-left: 450px;
 }
-.Iinfo{
-  color: white;
-  font-size: 18px;
-  letter-spacing: 1px;
-  font-family: 'Open Sans Condensed', sans-serif;
+.ThePicCaps {
   text-align: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  background-color: black;
+  padding: 2px 16px;
+  color: black;
 }
-.closeLB{
-  position: inherit;
-  font-size: 40px;
-  color: LightGray;
-  opacity: 0.9;
-  display: none;
-  text-align: center;
+#TheThumb:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#TheThumb{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.TheThPic img{
   width: 150px;
-  z-index: 10;
-  background-color: Transparent;
-  background-repeat:no-repeat;
-  border: none;
-  cursor:pointer;
-  overflow: hidden;
-  outline:none;
-}
-.closeLB:hover{
-  color: red;
-  font-size: 43px;
+  height: 150px;
+  padding: 2px;
+  opacity: 0.6;
 }
 /* meet the owner page */
 .profile{

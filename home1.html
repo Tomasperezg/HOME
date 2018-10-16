@@ -1,6 +1,19 @@
+<!DOCTYPE html>
+<html class="Home1Body">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <div class="TheLogo">
-  <a href="index.html">
+  <a href="index.html#projects">
     <img src="https://static.wixstatic.com/media/fbfd5e_d5f4df98682d416c88f190c4b9d980a9~mv2.jpeg/v1/fill/w_170,h_138,al_c,q_80,usm_0.66_1.00_0.01/fbfd5e_d5f4df98682d416c88f190c4b9d980a9~mv2.webp" alt="BLACKBIRD logo">
+  </a>
+</div>
+
+<div class="GoBack">
+  <a href="index.html#projects">
+    <img src="pics/left-arrow.png" alt="return button">
   </a>
 </div>
 
@@ -33,12 +46,37 @@
 
   <!--The Buttons for next & Previous  -->
 
-  <input type="button" class="nex" value="next" name=">">
-  <input type="button" class="bc" value="bcward" name="<">
+  <input type="button" class="next" value=">" onclick="plusSlides(1)">
+  <input type="button" class="prev" value="<" onclick="plusSlides(-1)">
 
-  <!-- Images on the bottom -->
-  <div id="TheThumb">
-    <p id="TheCaptions"></p>
+<!-- This is where the pictures captions go -->
+  <div id="ThePicCaps">
+    <p class="TheCaptions"></p>
   </div>
 
+  <!-- This is where the pictues of the thumbnail go -->
+  <div id="TheThumb">
+    <div class="TheThPic">
+      <img src="house/1.jpg" alt="Thepic1" onclick="ShowPic(1)">
+    </div>
+
+    <div class="TheThPic">
+      <img src="house/2.jpg" alt="Thepic2" onclick="ShowPic(2)">
+    </div>
+
+    <div class="TheThPic">
+      <img src="house/3.jpg" alt="Thepic3" onclick="ShowPic(3)">
+    </div>
+
+    <div class="TheThPic">
+      <img src="house/4.jpg" alt="Thepic4" onclick="ShowPic(4)">
+    </div>
+
+    <div class="TheThPic">
+      <img src="house/5.jpg" alt="Thepic5" onclick="ShowPic(5)">
+    </div>
+  </div>
 </div>
+
+<script src="scriptHome1.js"></script>
+</html>
