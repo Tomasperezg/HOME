@@ -417,6 +417,9 @@ body{
 
 /* meet the owner page */
 .OwnerPG{
+  text-align: center;
+}
+.OwnerPG{
   margin-top: 50px;
 }
 .profile{
