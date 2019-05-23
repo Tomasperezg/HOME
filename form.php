@@ -1,15 +1,17 @@
 
 <?php
     //Pulling values that were entered into the form.
+
+var url = $form.attr("action");
 $name = $_POST['visitorName'];
 $email = $_POST['visitorEmail'];
-$message = $POST['visitorMsg'];
+$message = $_POST['visitorMsg'];
 
 //Structure of email that I will receive with the form info
 $email_from = "donoreplytothisemail@gmail.com";
 $email_subject = 'New Contact Form Message';
-$email_body = "You have received a new message from $name. \n".
-                "Here is the message: \n $message".
+$email_body = "You have received a new message from $name. \n";
+                "Here is the message: \n $message";
 
 //Sending to my email address and using the mail function
     $to = "perezgantomas@gmail.com";

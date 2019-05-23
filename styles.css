@@ -4,12 +4,13 @@
 body{
   margin: 0 auto;
 }
+* {box-sizing: border-box}
 #home{
   height: 810px;
 }
 #SlideShow img{
   vertical-align: middle;
-  height: 810px;
+  height: 818px;
   width: 100%;
 }
 #SlideShow {
@@ -59,26 +60,48 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 45px;
+    font-size: 25px;
     font-family: 'Noto Serif JP', sans-serif;
-    border-bottom: 7px solid #1d191f;
-    letter-spacing: 7px;
+    border-bottom: 3px solid #1d191f;
+    letter-spacing: 3px;
   }
 /* Navigation Bar */
 #NavBar{
-  text-align: center;
-  background-color: rgb(36,36,36);
-  opacity: .8;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  width: 100%;
+  background-color: rgb(34, 39, 39);
 }
-#NavBar a{
-  padding: 5px;
-  text-decoration: none;
-  color: LightGray;
+#NavBar li{
+  list-style: none;
+  padding: 10px;
   font-size: 20px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 1px;
+  color: white;
+}
+.nav{
+  margin: 0;
+}
+#NavBar li:after {
+    content: "";
+    display: block;
+    width: 0;
+    border-bottom: 1px solid;
+    margin: 0 auto;
+    transition:all 0.3s linear 0s;
+    color: rgb(80,80,80);
+}
+
+#NavBar li:hover:after {
+    width: 90%;
+    color: white;
+  }
+#NavBar ul{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+}
+.menua a{
+  text-decoration: none;
 }
 .sticky {
   position: fixed;
@@ -86,53 +109,28 @@ body{
   width: 100%;
   z-index: 1;
 }
-.act{
-  color: white;
-}
-#NavBar a:hover {
-  color: white;
-}
-#NavBar a:active{
-  color: white;
-}
-.topnav .icon {
-    display: none;
-}
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-@media screen and (max-width: 600px) {
-  .topnav.responsive {
-    position: fixed;
-    top: 0;
-    z-index:999;
-  }
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 10px;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align:center;
-    margin-bottom: 15px;
-    margin-top: 15px;
-  }
-  #NavBar{
-    opacity: 0.9;
-    z-index: 1;
-    position: fixed;
-    top: 0;
-  }
 
+/* Go Back to Top Button */
+#GoBackBT {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
 }
+
+#GoBackBT:hover {
+  background-color: #555;
+}
+
 /* About BBhomes */
 #theInfo{
   display: block;
@@ -168,15 +166,20 @@ body{
 #about{
   padding-top: 100px;
   height: 840px;
-  background-color: rgb(208, 236, 224));
+  /* background-image: url(pics/Wall.jpg); */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #FFFFFF;
 }
 /* projects page */
 #Pro{
   text-align: center;
   letter-spacing: 3px;
   font-size: 35px;
-  padding-top: 60px;
-  margin-bottom: 35px;
+  padding-top: 35px;
+  margin-bottom: 10px;
   font-family: 'Roboto Condensed', sans-serif;
 
 }
@@ -208,7 +211,7 @@ body{
   text-align: center;
 }
 #projects{
-  background-color: rgb(254, 254, 254);
+  background-color: white;
 }
 .house:hover .image {
   border-radius: 100%;
@@ -228,21 +231,18 @@ body{
   text-rendering: optimizeLegibility;
 }
 /* lightbox */
-.Home1Body{
-  border-style: solid;
-  border-color: LightGray;
-  border-width: 12px;
-  height: 100%;
+.TheIcons img{
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
 }
-.GoBack{
-  display: flex;
-  justify-content: flex-end;
-}
-.TheLogo img{
+.LogoImg{
   width: 100px;
-  margin-left: 40px;
-  margin-top: 10px;
-  padding: 2px;
+  margin-left: 160px;
+}
+.returnI{
+  margin-left: 1120px;
+  width: 60px;
 }
 #HomeOne{
   position: relative;
@@ -252,11 +252,9 @@ body{
   text-align: center;
 }
 .ThePcImg{
-  width: 550px;
-  height: 370px;
-}
-.TheThPic:hover{
-  cursor: pointer;
+  width: 730px;
+  height: 540px;
+  padding-top: 80px;
 }
 .prev,
 .next {
@@ -277,21 +275,48 @@ body{
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-  margin-right: 445px;
+  margin-right: 305px;
+  color: black;
 }
 .prev{
-  margin-left: 432px;
+  margin-left: 305px;
+  color: black;
 }
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+#TheTitles{
+  display: flex;
+  flex-wrap: wrap;
+}
+.Subtitle{
+  padding-top: 25px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+.Home1Info{
+  width: 600px;
+  margin-left: 450px;
+  margin-right: 450px;
+  padding-top: 15px;
+  font-size: 19px;
+  text-indent: 30px;
+  font-family: 'Quicksand', sans-serif;
+}
+.Home1name{
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 15px;
+  margin-left: 370px;
 }
 .numberI {
   color: white;
   font-size: 25px;
   padding: 8px 12px;
   position: absolute;
-  margin-left: 450px;
+  margin-left: 335px;
 }
 .ThePicCaps {
   text-align: center;
@@ -305,7 +330,7 @@ body{
   clear: both;
 }
 #TheThumb{
-  display: flex;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -313,10 +338,87 @@ body{
 .TheThPic img{
   width: 150px;
   height: 150px;
-  padding: 2px;
   opacity: 0.6;
 }
+.active{
+  background-color: LightGray;
+  opacity: 1;
+}
+/* modal effects */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* meet the owner page */
+.OwnerPG{
+  margin-top: 50px;
+}
 .profile{
   text-align: center;
   margin-top: 40px;
@@ -352,19 +454,93 @@ body{
 }
 #owner{
   padding-top: 100px;
-  background-color: rgb(255, 255, 255);
+  background-color: #F8F8FF;
   border-radius: 10px;
   height: 860px;
   width: 100%;
 }
 /* CONTACT page */
-.ConPic{
-  width: 100%;
-  height: 330px;
-  filter: opacity(80%);
+
+.Testimonials{
+  position: relative;
+  background: #f1f1f1f1;
+  height: 138px;
+  text-align: center;
+  padding-top: 15px;
 }
+mySlides {
+  display: none;
+  padding: 80px;
+}
+
+/* Next & previous buttons */
+.prev_1, .next_1 {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next_1 {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  margin-right: 0;
+}
+/* Position the "previous button" to the left */
+.prev_1{
+  display: flex;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev_1:hover, .next_1:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot_1 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot_1:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {
+  font-style: italic;
+}
+
+/* Add a blue color to the author */
+.author {
+  color: cornflowerblue;
+}
+
+
 #contact{
-  height: 760px;
+  height: 700px;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
@@ -523,8 +699,7 @@ textarea:hover {
 }
 .ConTitle{
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 55px;
   font-family: 'Lato', sans-serif;
   color: #b3aca7;
 }
@@ -628,6 +803,7 @@ textarea:hover {
     height: 160px;
     width: 360px;
   }
+
   #contact{
     height: 560px;
   }

@@ -2,18 +2,17 @@
 <html class="Home1Body">
 <head>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<div class="TheLogo">
-  <a href="index.html#projects">
-    <img src="https://static.wixstatic.com/media/fbfd5e_d5f4df98682d416c88f190c4b9d980a9~mv2.jpeg/v1/fill/w_170,h_138,al_c,q_80,usm_0.66_1.00_0.01/fbfd5e_d5f4df98682d416c88f190c4b9d980a9~mv2.webp" alt="BLACKBIRD logo">
+<div class="TheIcons">
+  <a href="index.html">
+    <img class="LogoImg"src="https://static.wixstatic.com/media/fbfd5e_d5f4df98682d416c88f190c4b9d980a9~mv2.jpeg/v1/fill/w_170,h_138,al_c,q_80,usm_0.66_1.00_0.01/fbfd5e_d5f4df98682d416c88f190c4b9d980a9~mv2.webp" alt="BLACKBIRD logo">
   </a>
-</div>
-
-<div class="GoBack">
   <a href="index.html#projects">
-    <img src="pics/left-arrow.png" alt="return button">
+    <img class="returnI"src="pics/left-arrow.png" alt="return button">
   </a>
 </div>
 
@@ -42,6 +41,18 @@
   <div class="ThePics">
     <div class="numberI">5/5</div>
       <img class="ThePcImg" src="house/5.jpg">
+  </div>
+
+  <div id="TheHomeInfo">
+    <div id="TheTitles">
+      <div class="Home1name">2145 Indian Trail</div>
+      <div class="Subtitle">Mid-century mess to mid-century magnificence.</div>
+    </div>
+    <div class="Home1Info">
+      In the main living area, the ceilings were vaulted and walls removed to create a large living area separated only by a double fireplace.
+      Lighting and plumbing fixtures will bring back memories for most baby boomers.
+      A master suite was created, and a powder room was added to the main living area.
+    </div>
   </div>
 
   <!--The Buttons for next & Previous  -->
@@ -76,6 +87,12 @@
       <img src="house/5.jpg" alt="Thepic5" onclick="ShowPic(5)">
     </div>
   </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
 </div>
 
 <script src="scriptHome1.js"></script>
