@@ -65,6 +65,15 @@ body{
     border-bottom: 3px solid #1d191f;
     letter-spacing: 3px;
   }
+  .centered2 {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      font-family: 'Noto Serif JP', sans-serif;
+      letter-spacing: 1px;
+    }
 /* Navigation Bar */
 #NavBar{
   background-color: rgb(34, 39, 39);
@@ -178,7 +187,7 @@ body{
   text-align: center;
   letter-spacing: 3px;
   font-size: 35px;
-  padding-top: 35px;
+  padding-top: 45px;
   margin-bottom: 10px;
   font-family: 'Roboto Condensed', sans-serif;
 
@@ -230,62 +239,8 @@ body{
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
 }
-/* lightbox */
-.TheIcons img{
-  padding: 15px;
-  position: absolute;
-  z-index: 1;
-}
-.LogoImg{
-  width: 100px;
-  margin-left: 160px;
-}
-.returnI{
-  margin-left: 1120px;
-  width: 60px;
-}
-#HomeOne{
-  position: relative;
-}
-.ThePics{
-  display: none;
-  text-align: center;
-}
-.ThePcImg{
-  width: 730px;
-  height: 540px;
-  padding-top: 80px;
-}
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-style: hidden;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-  margin-right: 305px;
-  color: black;
-}
-.prev{
-  margin-left: 305px;
-  color: black;
-}
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
+
+
 #TheTitles{
   display: flex;
   flex-wrap: wrap;
@@ -398,15 +353,7 @@ body{
 }
 
 /* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+
 
 .close:hover,
 .close:focus {
@@ -457,7 +404,7 @@ body{
 }
 #owner{
   padding-top: 100px;
-  background-color: #F8F8FF;
+  background-image: linear-gradient(white, #F8F8FF, white);
   border-radius: 10px;
   height: 860px;
   width: 100%;
@@ -466,7 +413,7 @@ body{
 
 .Testimonials{
   position: relative;
-  background: #f1f1f1f1;
+  background: #E5E4E2;
   height: 138px;
   text-align: center;
   padding-top: 15px;
@@ -511,7 +458,7 @@ mySlides {
 .dot-container {
     text-align: center;
     padding: 20px;
-    background: #ddd;
+    background: #E5E4E2;
 }
 
 /* The dots/bullets/indicators */
@@ -520,7 +467,7 @@ mySlides {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: white;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;

@@ -16,15 +16,29 @@ function ShowSlides(){
     dots[i].className = dots[i].className.replace("active", "");
 }
   slides[SlideIndex-1].style.display = "block";
-    dots[SlideIndex-1].className += " active";
     setTimeout(ShowSlides, 3000);
 }
 //this is jquery for text and picture fade animation
-$('.centered').hide().fadeIn(5000);
+
+$('.centered').hide().fadeIn(2500);
+$('.centered').promise().done(function(){
+  alert('succeeded');
+    function TypeEffect (){
+      var LetterCount = 0;
+      var TXT = "old homes, reimagined";
+      var Speed = 10;
+      if (LetterCount <= TXT.length){
+        document.getElementsByClassName('centered2').innerHTML = TXT.charAt(LetterCount);
+        LetterCount++;
+        setTimeout(TypeEffect, Speed);
+    }
+  }
+});
 $('#SlideShow').hide().fadeIn(1500);
 
 
-//This will animate when NavBar redirect to a link
+
+//This will animate when NavBar redirect to a section of the page
 $("a[href^='#']").click(function(e) {
 	e.preventDefault();
 
@@ -49,6 +63,7 @@ function scrollFunction() {
     document.getElementById("GoBackBT").style.display = "block";
   } else {
     document.getElementById("GoBackBT").style.display = "none";
+
   }
 }
 
@@ -68,7 +83,7 @@ $('.weR').hide().fadeIn(3000);
 $('.aboutBB').hide().fadeIn(3000);
 });
 
-// This is for the Testimonials Page Will allow only 3 slides for UI/UX
+// This is for the Testimonials Page
 var slideIndex = 1;
 showSlides(slideIndex);
 
