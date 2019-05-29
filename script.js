@@ -19,23 +19,33 @@ function ShowSlides(){
     setTimeout(ShowSlides, 3000);
 }
 //this is jquery for text and picture fade animation
+// Typing effect
+// Wait for centered to done loading
+$('.centered').hide().fadeIn(2500).promise().done(function(){
+// test
+  console.log("Text was loaded");
 
-$('.centered').hide().fadeIn(2500);
-$('.centered').promise().done(function(){
-  alert('succeeded');
-    function TypeEffect (){
-      var LetterCount = 0;
-      var TXT = "old homes, reimagined";
-      var Speed = 10;
-      if (LetterCount <= TXT.length){
-        document.getElementsByClassName('centered2').innerHTML = TXT.charAt(LetterCount);
-        LetterCount++;
-        setTimeout(TypeEffect, Speed);
+  function typeEffect () {
+
+    var words = 0;
+    var text = "old homes, reimagined";
+    var speed = 1500;
+    if (words <= text.length) {
+      // document.getElementsByClassName('centered2')[text].innerHTML += text.charAt(words);
+      let v = $(".centered2").html(text);
+        v.charAt(words);
+      words++;
+      cosole.log(v);
+      setTimeout(typeEffect, speed);
+
     }
   }
-});
-$('#SlideShow').hide().fadeIn(1500);
+  typeEffect();
+  console.log("I am done");
+})
 
+
+$('#SlideShow').hide().fadeIn(1500);
 
 
 //This will animate when NavBar redirect to a section of the page
