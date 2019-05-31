@@ -21,27 +21,24 @@ function ShowSlides(){
 //this is jquery for text and picture fade animation
 // Typing effect
 // Wait for centered to done loading
-$('.centered').hide().fadeIn(2500).promise().done(function(){
+var txt = "old homes, reimagined";
+var container;
+var speed = 200;
+var words = 0;
+
+$('.centered').hide().fadeIn(2500).promise().done(function typeEffect (){
 // test
   console.log("Text was loaded");
 
-  function typeEffect () {
 
-    var text = "old homes, reimagined";
-    var container;
-    var speed = 50;
+    if (words < txt.length){
+        var container = $(".centered2").html(txt.charAt(words++));
 
-    for (words = 0; words < text.length; words++) {
-        var container = $(".centered2").html(text.charAt(words));
         console.log(container);
         setTimeout(typeEffect, speed);
-      break;
-    };
-
-  };
-  typeEffect();
-  console.log("I am done");
+    }
 });
+
 
 
 $('#SlideShow').hide().fadeIn(1500);
