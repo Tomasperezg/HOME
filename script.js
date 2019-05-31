@@ -27,22 +27,21 @@ $('.centered').hide().fadeIn(2500).promise().done(function(){
 
   function typeEffect () {
 
-    var words = 0;
     var text = "old homes, reimagined";
-    var speed = 1500;
-    if (words <= text.length) {
-      // document.getElementsByClassName('centered2')[text].innerHTML += text.charAt(words);
-      let v = $(".centered2").html(text);
-        v.charAt(words);
-      words++;
-      cosole.log(v);
-      setTimeout(typeEffect, speed);
+    var container;
+    var speed = 50;
 
-    }
-  }
+    for (words = 0; words < text.length; words++) {
+        var container = $(".centered2").html(text.charAt(words));
+        console.log(container);
+        setTimeout(typeEffect, speed);
+      break;
+    };
+
+  };
   typeEffect();
   console.log("I am done");
-})
+});
 
 
 $('#SlideShow').hide().fadeIn(1500);
