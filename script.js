@@ -73,14 +73,16 @@ $('.weR').hide().fadeIn(3000);
 $('.aboutBB').hide().fadeIn(3000);
 });
 
-// ProjectBox Logic will go here
+
 $('img.image').on("click", function(){
-  let box = $('.ProjectBox');
-  console.log("Image was clicked");
-  box.removeClass('.ProjectBox').addClass('.hide');
+  console.log("Image was clcked");
+  var box = $('.ProjectBox');
+  box.removeClass('hide');
 });
-
-
+$('.X').on("click", function(){
+  console.log("X was clicked");
+  $('.ProjectBox').hide(1000);
+})
 
 
 

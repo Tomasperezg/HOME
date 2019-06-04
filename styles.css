@@ -8,7 +8,7 @@ body{
   box-sizing: border-box;
 }
 .hide{
-  width: 0;
+  display: none;
 }
 #home{
   height: 810px;
@@ -305,9 +305,20 @@ body{
   opacity: 1;
 }
 .ProjectBox{
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
   width: 100%;
-  height: 500px;
-  background-color: red;
+  height: 100%;
+  background:white;
+  z-index: 1;
+}
+.X{
+  font-size: 50px;
+  color: red;
+  text-align: center;
 }
 
 /* modal effects */
