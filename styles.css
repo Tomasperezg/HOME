@@ -4,7 +4,12 @@
 body{
   margin: 0 auto;
 }
-* {box-sizing: border-box}
+* {
+  box-sizing: border-box;
+}
+.hide{
+  width: 0;
+}
 #home{
   height: 810px;
 }
@@ -299,6 +304,12 @@ body{
   background-color: LightGray;
   opacity: 1;
 }
+.ProjectBox{
+  width: 100%;
+  height: 500px;
+  background-color: red;
+}
+
 /* modal effects */
 .modal {
     display: none; /* Hidden by default */

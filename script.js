@@ -16,32 +16,18 @@ function ShowSlides(){
     dots[i].className = dots[i].className.replace("active", "");
 }
   slides[SlideIndex-1].style.display = "block";
-    setTimeout(ShowSlides, 3000);
+    setTimeout(ShowSlides, 5000);
 }
 //this is jquery for text and picture fade animation
-// Typing effect
-// Wait for centered to done loading
-var txt = "old homes, reimagined";
-var container;
-var speed = 200;
-var words = 0;
-
-$('.centered').hide().fadeIn(2500).promise().done(function typeEffect (){
+tex = 'old homes, reimagined';
+$('.centered').hide().fadeIn(1500).promise().done(function typeEffect (){
 // test
   console.log("Text was loaded");
-
-
-    if (words < txt.length){
-        var container = $(".centered2").html(txt.charAt(words++));
-
-        console.log(container);
-        setTimeout(typeEffect, speed);
-    }
+    var container = $(".centered2");
+    container.html(tex).hide().fadeIn(500);
 });
 
-
-
-$('#SlideShow').hide().fadeIn(1500);
+$('#SlideShow').hide().fadeIn(1000);
 
 
 //This will animate when NavBar redirect to a section of the page
@@ -69,7 +55,6 @@ function scrollFunction() {
     document.getElementById("GoBackBT").style.display = "block";
   } else {
     document.getElementById("GoBackBT").style.display = "none";
-
   }
 }
 
@@ -80,7 +65,6 @@ $(document).ready(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
     });
-
 });
 
 // this will animate the About page text
@@ -88,6 +72,18 @@ $('a.menu').on("click", function(){
 $('.weR').hide().fadeIn(3000);
 $('.aboutBB').hide().fadeIn(3000);
 });
+
+// ProjectBox Logic will go here
+$('img.image').on("click", function(){
+  let box = $('.ProjectBox');
+  console.log("Image was clicked");
+  box.removeClass('.ProjectBox').addClass('.hide');
+});
+
+
+
+
+
 
 // This is for the Testimonials Page
 var slideIndex = 1;
