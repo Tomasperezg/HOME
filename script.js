@@ -82,7 +82,7 @@ $('img.image').on("click", function(){
 $('.X').on("click", function(){
   console.log("X was clicked");
   $('.ProjectBox').hide(1000);
-})
+});
 
 
 
